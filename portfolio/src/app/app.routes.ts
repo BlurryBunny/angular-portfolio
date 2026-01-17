@@ -4,14 +4,14 @@ export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: 'home',
-    loadComponent: () => import('./pages/home/home').then(m => m.HomeComponent)
+    loadComponent: () => import('./pages/home/home').then(m => m.Home)
   },
   {
     path: 'projects',
-    loadComponent: () => import('./pages/projects/projects').then(m => m.ProjectsComponent)
+    loadComponent: () => import('./pages/projects/projects').then(m => m.Projects)
   },
   {
     path: 'about',
-    loadComponent: () => import('./pages/about/about').then(m => m.AboutComponent)
+    loadComponent: () => import('./pages/about/about').then(m => m.About)
   }
 ];

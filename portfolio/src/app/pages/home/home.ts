@@ -44,16 +44,18 @@ export class Home implements OnInit, OnDestroy {
   }
 
   downloadCV() {
-    window.open('assets/my-cv.pdf', '_blank');
+    window.open('my-cv.pdf', '_blank');
   }
-  name = 'Tu Nombre Aquí';
+  name = 'Ulises Uriel Domínguez Pérez';
   roles: string[] = ['Full Stack Developer', 'Tech Lead', 'Mobile Developer'];
   techStack: SwiperItem[] = [
-    { title: '.NET', image: 'assets/icons/dotnet.png' },
-    { title: 'Angular', image: 'assets/icons/angular.png' },
-    { title: 'Laravel', image: 'assets/icons/laravel.png' },
-    { title: 'Flutter', image: 'assets/icons/flutter.png' },
-    { title: 'Python', image: 'assets/icons/python.png' }
+    { title: '.NET', image: 'icons/dotnet-svgrepo-com.svg' },
+    { title: 'Angular', image: 'icons/angular-svgrepo-com.svg' },
+    { title: 'React', image: 'icons/react-svgrepo-com.svg' },
+    { title: 'Vue', image: 'icons/vue-svgrepo-com.svg' },
+    { title: 'Laravel', image: 'icons/laravel-svgrepo-com.svg' },
+    { title: 'Flutter', image: 'icons/flutter-svgrepo-com.svg' },
+    { title: 'Python', image: 'icons/python-svgrepo-com.svg' }
   ];
 
   azureExperience: SwiperItem[] = [

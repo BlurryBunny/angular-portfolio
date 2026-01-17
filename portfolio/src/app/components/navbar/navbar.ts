@@ -10,4 +10,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class NavbarComponent {
   brandName = 'DevPortfolio';
+  image = 'icons/logo-name.svg';
+  title = 'logo-ulises';
 }

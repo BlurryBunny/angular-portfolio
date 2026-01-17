@@ -10,10 +10,11 @@ import { FooterComponent } from './components/footer/footer';
     RouterOutlet,     // Necesario para <router-outlet>
     NavbarComponent,  // Asegúrate de importar tus componentes de UI
     FooterComponent
+
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class AppComponent {
+export class App {
   title = 'portfolio-angular';
 }

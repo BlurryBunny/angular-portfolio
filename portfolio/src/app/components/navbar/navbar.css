@@ -35,8 +35,13 @@
   color: #007bff;
 }
 
-/* Clase aplicada por routerLinkActive */
 .active {
   color: #007bff !important;
   border-bottom: 2px solid #007bff;
+}
+
+.tech-icon {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
 }
