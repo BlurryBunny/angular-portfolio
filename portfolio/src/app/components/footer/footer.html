@@ -1,8 +1,31 @@
-<footer class="main-footer">
-  <div class="social-links">
-    <a href="https://linkedin.com/in/tu-usuario" target="_blank">LinkedIn</a>
-    <a href="https://facebook.com/tu-usuario" target="_blank">Facebook</a>
-    <a href="mailto:tuemail@gmail.com">Gmail</a>
+<footer class="main-footer py-5 mt-auto">
+  <div class="container text-center">
+    <div class="row justify-content-center mb-4">
+      <div class="col-auto">
+        <a href="https://linkedin.com/in/tu-usuario" target="_blank" class="social-icon linkedin">
+          <fa-icon [icon]="faLinkedin"></fa-icon> </a>
+      </div>
+      <div class="col-auto">
+        <a href="https://facebook.com/tu-usuario" target="_blank" class="social-icon facebook">
+          <fa-icon [icon]="faFacebook"></fa-icon>
+        </a>
+      </div>
+      <div class="col-auto">
+        <a href="https://github.com/BlurryBunny" class="social-icon github">
+          <fa-icon [icon]="faGithub"></fa-icon>
+        </a>
+      </div>
+
+      <div class="col-auto">
+        <a href="mailto:ulises.uudp@gmail.com" class="social-icon gmail">
+          <fa-icon [icon]="faGoogle"></fa-icon>
+        </a>
+      </div>
+    </div>
+
+    <p class="copyright">
+      &copy; 2026 - Diseñado con <i class="fa-solid fa-heart text-danger"></i> por
+      <span class="fw-bold text-primary">{{ developerName }}</span>
+    </p>
   </div>
-  <p>© 2026 - Diseñado por {{ developerName }}</p>
 </footer>

@@ -1,16 +1,28 @@
-<nav class="navbar">
+<nav class="navbar navbar-expand-lg">
   <div class="nav-brand">
-      <img [src]="image" [alt]="title" class="tech-icon">
+    <a routerLink="/home">
+      <img [src]="image" [alt]="title" class="brand-logo">
+    </a>
   </div>
+
   <ul class="nav-links">
     <li>
-      <a routerLink="/home" routerLinkActive="active">Inicio</a>
+      <a routerLink="/home" routerLinkActive="active">
+        <fa-icon [icon]="faHome" class="nav-icon"></fa-icon>
+        <span>Inicio</span>
+      </a>
     </li>
     <li>
-      <a routerLink="/projects" routerLinkActive="active">Proyectos</a>
+      <a routerLink="/projects" routerLinkActive="active">
+        <fa-icon [icon]="faCode" class="nav-icon"></fa-icon>
+        <span>Proyectos</span>
+      </a>
     </li>
     <li>
-      <a routerLink="/about" routerLinkActive="active">Sobre mí</a>
+      <a routerLink="/about" routerLinkActive="active">
+        <fa-icon [icon]="faUser" class="nav-icon"></fa-icon>
+        <span>Sobre mí</span>
+      </a>
     </li>
   </ul>
 </nav>

@@ -2,46 +2,74 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
-  background-color: #1a1a1a;
+  padding: 0.8rem 10%;
+  background-color: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px); /* Efecto cristal moderno */
   color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
-.nav-brand a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #007bff;
-  text-decoration: none;
+.brand-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.brand-logo:hover {
+  transform: rotate(10deg) scale(1.1);
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 2.5rem;
   margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
-  color: white;
-  text-decoration: none;
+  color: #cccccc;
+  text-decoration: none !important; /* Quita subrayado */
   font-weight: 500;
-  transition: color 0.3s;
+  display: flex;
+  flex-direction: column; /* Icono arriba del texto */
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.nav-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+/* Animación Hover */
 .nav-links a:hover {
   color: #007bff;
+  transform: translateY(-3px);
 }
 
+.nav-links a:hover .nav-icon {
+  transform: scale(1.2);
+}
+
+/* Estado Activo */
 .active {
   color: #007bff !important;
-  border-bottom: 2px solid #007bff;
+  position: relative;
 }
 
-.tech-icon {
-  width: 75px;
-  height: 75px;
-  object-fit: contain;
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  border-radius: 2px;
 }

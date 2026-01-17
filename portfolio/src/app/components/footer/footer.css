@@ -1,0 +1,46 @@
+.main-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  color: #555;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+/* Efectos de colores por red social */
+.social-icon:hover {
+  transform: translateY(-5px);
+  color: white;
+}
+
+.linkedin:hover { background-color: #0077b5; }
+.facebook:hover { background-color: #1877f2; }
+.gmail:hover { background-color: #db4437; }
+.github:hover { background-color: #908d8c; }
+
+.divider {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #007bff, transparent);
+  margin: 0 auto;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.copyright span {
+  letter-spacing: 0.5px;
+}
