@@ -8,7 +8,7 @@ export const routes: Routes = [
   },
   {
     path: 'projects',
-    loadComponent: () => import('./pages/projects/projects').then(m => m.Projects)
+    loadComponent: () => import('./pages/projects/projects').then(m => m.ProjectPage)
   },
   {
     path: 'about',

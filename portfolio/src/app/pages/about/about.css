@@ -1,0 +1,103 @@
+.about-page {
+  background: linear-gradient(to bottom, #ffffff, #f9fbff);
+  overflow-x: hidden;
+}
+
+/* Estilo de crecimiento profesional */
+.icon-box {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 1.2rem;
+}
+
+.rounded-custom {
+  border-radius: 30px;
+  border-bottom-right-radius: 100px;
+}
+
+/* Badge de Tech Lead */
+.about-img-frame {
+  position: relative;
+  display: inline-block;
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: #007bff;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-badge .number { font-size: 1.2rem; font-weight: bold; }
+.experience-badge .text { font-size: 0.8rem; text-transform: uppercase; }
+
+/* Tarjetas de Hobbies */
+.hobby-card {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.hobby-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  border-color: #007bff;
+}
+
+.hobby-icon {
+  font-size: 2rem;
+  color: #007bff;
+  opacity: 0.8;
+}
+
+.x-small { font-size: 0.75rem; }
+
+.evolution-timeline {
+  position: relative;
+  border-left: 2px dashed #dee2e6;
+  padding-left: 25px;
+  margin-left: 15px;
+}
+
+.timeline-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -3rem;
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.active-path {
+  background-color: rgba(0, 123, 255, 0.05);
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 123, 255, 0.1);
+}
+
+.timeline-item {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(10px);
+}

@@ -1,1 +1,37 @@
-<p>projects works!</p>
+<section class="projects-section py-5">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="zoom-in">
+      <h2 class="display-4 fw-bold">Mis Proyectos</h2>
+      <p class="lead text-muted">Explora mis colaboraciones profesionales y proyectos personales.</p>
+    </div>
+
+    <ul ngbNav #nav="ngbNav" [(activeId)]="activeTab" class="nav-pills justify-content-center mb-5">
+      <li [ngbNavItem]="1">
+        <button ngbNavLink>Colaboraciones</button>
+        <ng-template ngbNavContent>
+          <div class="row g-4">
+            @for (proj of onWeb; track proj.title) {
+              <div class="col-12 col-md-6 col-lg-4">
+                <app-project-card [project]="proj"></app-project-card>
+              </div>
+            }
+          </div>
+        </ng-template>
+      </li>
+      <li [ngbNavItem]="2">
+        <button ngbNavLink>Proyectos Personales</button>
+        <ng-template ngbNavContent>
+          <div class="row g-4">
+            @for (proj of myProjects; track proj.title) {
+              <div class="col-12 col-md-6 col-lg-4">
+                <app-project-card [project]="proj"></app-project-card>
+              </div>
+            }
+          </div>
+        </ng-template>
+      </li>
+    </ul>
+
+    <div [ngbNavOutlet]="nav" class="mt-4"></div>
+  </div>
+</section>

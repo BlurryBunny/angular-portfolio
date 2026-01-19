@@ -1,0 +1,18 @@
+<div class="project-card" data-aos="fade-up">
+  <a [href]="project().projectUrl" target="_blank" class="card-link">
+    <div class="img-container">
+      <img [src]="project().imgUrl" [alt]="project().title" class="project-img">
+      <div class="overlay">
+        <div class="overlay-content">
+          <h4>{{ project().title }}</h4>
+          <p>{{ project().description }}</p>
+          <div class="tags">
+            @for (tag of project().tags; track tag) {
+              <span class="badge rounded-pill bg-primary me-1">{{ tag }}</span>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
