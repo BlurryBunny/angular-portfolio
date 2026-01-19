@@ -1,15 +1,15 @@
 <div class="container-fluid p-0">
   <section class="hero-section d-flex align-items-center">
     <div class="container">
-      <div class="row align-items-center min-vh-75">
+      <div class="row align-items-center min-vh-75 pt-5">
         <div class="col-md-7 text-start fade-in-up">
-          <h1 class="display-3 fw-bold">Hola, soy <span class="text-primary">{{ name }}</span></h1>
+          <h1 class="display-3 fw-bold">Hi, Im <span class="text-primary">{{ name }}</span></h1>
           <h2 class="typing-container"><span class="typed-text">{{ displayText() }}</span><span class="cursor">|</span>
           </h2>
-          <p class="lead mt-4 text-secondary">Especialista en soluciones escalables y arquitectura de software moderna.
+          <p class="lead mt-4 text-secondary">I'm glad you got this far, I hope to meet you and work together on something.
           </p>
           <button (click)="downloadCV()" class="btn btn-outline-primary btn-lg mt-3">
-            <i class="bi bi-download"></i> Descargar CV
+            <i class="bi bi-download"></i> Downloand CV
           </button>
         </div>
 
@@ -24,7 +24,7 @@
 
   <section class="tech-section py-5">
     <div class="container text-center">
-      <h3 class="mb-5">Mi Stack Tecnológico</h3>
+      <h3 class="mb-5">My Tech Stack</h3>
       <div class="row justify-content-center">
         <div class="col-md-6">
           <app-swiper-component [items]="techStack" effect="cards">
@@ -38,8 +38,8 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-4">
-          <h2>Ecosistema Azure</h2>
-          <p class="lead text-info">He trabajado principalmente con soluciones integrales de nube y automatización.</p>
+          <h2>Azure DevOps</h2>
+          <p class="lead text-info">I have mainly worked with comprehensive cloud and automation solutions.</p>
         </div>
         <div class="col-lg-8">
           <app-swiper-component [items]="azureExperience" effect="coverflow" customClass="azure-swiper">

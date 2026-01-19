@@ -1,13 +1,13 @@
 <section class="projects-section py-5">
   <div class="container">
     <div class="text-center mb-5" data-aos="zoom-in">
-      <h2 class="display-4 fw-bold">Mis Proyectos</h2>
-      <p class="lead text-muted">Explora mis colaboraciones profesionales y proyectos personales.</p>
+      <h2 class="display-4 fw-bold">My Projects</h2>
+      <p class="lead text-muted">Explore my professional collaborations and personal projects.</p>
     </div>
 
     <ul ngbNav #nav="ngbNav" [(activeId)]="activeTab" class="nav-pills justify-content-center mb-5">
       <li [ngbNavItem]="1">
-        <button ngbNavLink>Colaboraciones</button>
+        <button ngbNavLink>Professional Collaborations</button>
         <ng-template ngbNavContent>
           <div class="row g-4">
             @for (proj of onWeb; track proj.title) {
@@ -19,7 +19,7 @@
         </ng-template>
       </li>
       <li [ngbNavItem]="2">
-        <button ngbNavLink>Proyectos Personales</button>
+        <button ngbNavLink>Personal Projects</button>
         <ng-template ngbNavContent>
           <div class="row g-4">
             @for (proj of myProjects; track proj.title) {

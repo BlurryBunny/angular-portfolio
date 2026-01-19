@@ -47,6 +47,7 @@
     "@fortawesome/angular-fontawesome": "^4.0.0",
     "@ng-bootstrap/ng-bootstrap": "^20.0.0",
     "@types/aos": "^3.0.7",
+    "angular-cli-ghpages": "^3.0.2",
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"

@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faGraduationCap, faUsers, faRocket, faCode, faTerminal,
   faRunning, faFutbol, faDumbbell, faSwimmer, faGamepad, faHeart
 } from '@fortawesome/free-solid-svg-icons';
-
+import AOS from 'aos';
 
 @Component({
   selector: 'app-about',
@@ -14,18 +14,52 @@ import {
   templateUrl: './about.html',
   styleUrl: './about.css'
 })
-export class About {
+
+
+export class About implements OnInit {
   faUsers = faUsers;
   faRocket = faRocket;
   faCode = faCode;
   faTerminal = faTerminal;
-faGraduationCap = faGraduationCap;
+  faGraduationCap = faGraduationCap;
+
   hobbies = [
-    { name: 'Running', icon: faRunning, desc: 'Correr con mi grupo de amigos y familiares en preparación para carreras.' },
-    { name: 'Fútbol', icon: faFutbol, desc: 'Pasión por un deporte desde niño.' },
-    { name: 'Gimnasio', icon: faDumbbell, desc: 'Disciplina y crecimiento fisicamente.' },
-    { name: 'Natación', icon: faSwimmer, desc: 'De ser aprendiz hasta dar clases a principiantes y encontrar una nueva pasión.' },
-    { name: 'Gaming', icon: faGamepad, desc: 'Desconexión total con el mundo con amigos.' },
-    { name: 'Mi familia', icon: faHeart, desc: 'Mi tiempo de calidad favorito. Con mis seres queridos.' }
+    {
+      name: 'Running',
+      icon: faRunning,
+      desc: 'Running with friends and family to prepare for upcoming races.'
+    },
+    {
+      name: 'Soccer',
+      icon: faFutbol,
+      desc: 'A lifelong passion for the game since I was a child.'
+    },
+    {
+      name: 'Gym',
+      icon: faDumbbell,
+      desc: 'Focused on discipline and physical growth.'
+    },
+    {
+      name: 'Swimming',
+      icon: faSwimmer,
+      desc: 'From being a learner to teaching beginners and finding a new passion.'
+    },
+    {
+      name: 'Gaming',
+      icon: faGamepad,
+      desc: 'A way to disconnect from the world and catch up with friends.'
+    },
+    {
+      name: 'My Family',
+      icon: faHeart,
+      desc: 'My favorite quality time spent with my loved ones.'
+    }
   ];
+
+  ngOnInit() {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  }
 }
