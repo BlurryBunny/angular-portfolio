@@ -1,6 +1,7 @@
 .main-footer {
-  background-color: #f8f9fa;
-  border-top: 1px solid #dee2e6;
+  background-color: var(--color-dark);
+  border-top: 3px solid var(--color-primary-muted);
+  color: var(--color-accent);
 }
 
 .social-icon {
@@ -10,37 +11,50 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: white;
-  color: #555;
+  background: var(--color-dark-light);
+  color: var(--color-accent);
+  box-shadow: var(--shadow-standard);
+  transition: all 0.3s ease;
   font-size: 1.5rem;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
 }
 
-/* Efectos de colores por red social */
 .social-icon:hover {
   transform: translateY(-5px);
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-accent) !important;
 }
 
-.linkedin:hover { background-color: #0077b5; }
-.facebook:hover { background-color: #1877f2; }
-.gmail:hover { background-color: #db4437; }
-.github:hover { background-color: #908d8c; }
+.linkedin:hover {
+  background-color: #0077b5;
+}
+.facebook:hover {
+  background-color: #1877f2;
+}
+.gmail:hover {
+  background-color: #db4437;
+}
+.github:hover {
+  background-color: #908d8c;
+}
 
 .divider {
   width: 100px;
   height: 2px;
-  background: linear-gradient(to right, transparent, #007bff, transparent);
+  background: linear-gradient(to right, transparent, var(--color-primary), transparent);
   margin: 0 auto;
 }
 
 .copyright {
   font-size: 0.9rem;
-  color: #6c757d;
+  color: var(--color-accent-muted);
 }
 
 .copyright span {
   letter-spacing: 0.5px;
+}
+
+.copyright .text-primary {
+  color: var(--color-primary) !important;
 }

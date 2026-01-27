@@ -1,0 +1,33 @@
+.projects-section {
+  background: var(--color-dark);
+  min-height: 80vh;
+}
+
+.projects-section h2 {
+  color: var(--color-primary);
+}
+
+.projects-section .lead {
+  color: var(--color-accent) !important;
+}
+
+::ng-deep .nav-pills .nav-link {
+  color: var(--color-accent);
+  background: var(--color-dark-light);
+  border: 1px solid transparent;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+::ng-deep .nav-pills .nav-link.active {
+  background-color: var(--color-primary) !important;
+  color: var(--color-accent) !important;
+  border-color: var(--color-primary);
+  box-shadow: 0 5px 15px rgba(146, 20, 12, 0.4);
+}
+
+::ng-deep .nav-pills .nav-link:hover:not(.active) {
+  border-color: var(--color-primary-muted);
+  color: var(--color-primary);
+  background-color: var(--color-accent-muted);
+}

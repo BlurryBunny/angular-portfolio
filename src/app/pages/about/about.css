@@ -1,9 +1,18 @@
 .about-page {
-  background: linear-gradient(to bottom, #ffffff, #f9fbff);
+  background: var(--color-dark);
+  color: var(--color-accent);
   overflow-x: hidden;
 }
 
-/* Estilo de crecimiento profesional */
+.about-page h2 span.text-primary {
+  color: var(--color-primary) !important;
+  text-shadow: 0 0 15px rgba(146, 20, 12, 0.3);
+}
+
+.about-page .lead {
+  color: var(--color-accent-muted) !important;
+}
+
 .icon-box {
   width: 45px;
   height: 45px;
@@ -19,9 +28,9 @@
 .rounded-custom {
   border-radius: 30px;
   border-bottom-right-radius: 100px;
+  border: 2px solid var(--color-primary-muted);
 }
 
-/* Badge de Tech Lead */
 .about-img-frame {
   position: relative;
   display: inline-block;
@@ -31,73 +40,124 @@
   position: absolute;
   bottom: -20px;
   right: -20px;
-  background: #007bff;
-  color: white;
+  background: var(--color-primary);
+  color: var(--color-accent);
   padding: 15px 25px;
   border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.4);
+  box-shadow: 0 10px 25px rgba(146, 20, 12, 0.5);
   display: flex;
   flex-direction: column;
 }
 
-.experience-badge .number { font-size: 1.2rem; font-weight: bold; }
-.experience-badge .text { font-size: 0.8rem; text-transform: uppercase; }
+.experience-badge .number {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.experience-badge .text {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
 
-/* Tarjetas de Hobbies */
+/* Sección Hobbies */
 .hobby-card {
-  background: white;
+  background: var(--color-dark-light);
   border-radius: 20px;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(255, 248, 240, 0.05);
   transition: all 0.3s ease;
   height: 100%;
 }
 
 .hobby-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-  border-color: #007bff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  border-color: var(--color-primary);
 }
 
 .hobby-icon {
   font-size: 2rem;
-  color: #007bff;
-  opacity: 0.8;
+  color: var(--color-primary);
+  filter: drop-shadow(0 0 5px rgba(146, 20, 12, 0.4));
 }
 
-.x-small { font-size: 0.75rem; }
+.hobby-card h6 {
+  color: var(--color-accent);
+}
 
+.hobby-card p {
+  color: var(--color-accent-muted);
+}
+
+.x-small {
+  font-size: 0.75rem;
+}
+
+/* Línea de tiempo de Evolución */
 .evolution-timeline {
   position: relative;
-  border-left: 2px dashed #dee2e6;
-  padding-left: 25px;
-  margin-left: 15px;
+  border-left: 2px dashed var(--color-primary-muted);
+  margin-left: 20px;
+  padding-bottom: 10px;
 }
 
 .timeline-icon {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: -3rem;
+  left: -23px;
   z-index: 2;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.active-path {
-  background-color: rgba(0, 123, 255, 0.05);
-  padding: 15px;
-  border-radius: 15px;
-  border: 1px solid rgba(0, 123, 255, 0.1);
-}
-
-.timeline-item {
-  position: relative;
-  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-standard);
+  transition: all 0.3s ease;
 }
 
 .timeline-item:hover {
-  transform: translateX(10px);
+  transform: translateX(15px);
+}
+
+.bg-info, .bg-secondary, .bg-primary {
+  background-color: var(--color-dark-light) !important;
+  color: var(--color-primary) !important;
+  border: 1px solid var(--color-primary);
+    transform: scale(1.1);
+}
+
+.bg-info,
+.bg-secondary,
+.bg-primary {
+  background-color: var(--color-dark-light) !important;
+  color: var(--color-primary) !important;
+  border: 1px solid var(--color-primary);
+}
+
+.active-path .timeline-icon {
+  background-color: var(--color-primary) !important;
+  color: var(--color-accent) !important;
+  margin-left: -1.75rem !important;
+}
+
+.active-path h5 {
+  color: var(--color-primary) !important;
+}
+
+.active-path {
+  background-color: rgba(146, 20, 12, 0.15);
+  border-radius: 18px;
+  border: 1px solid var(--color-primary-muted);
+  margin-left: 2.25rem;
+}
+
+
+.timeline-item {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-left: 45px;
+  margin-bottom: 2rem;
+}
+
+.text-muted{
+  color: var(--color-accent) !important;
+  opacity: 0.8;
 }

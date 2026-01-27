@@ -1,20 +1,30 @@
 <div class="swiper-wrapper-container" [class]="customClass()">
-  <swiper-container
-    #swiperRef
-    init="false"
-    class="custom-swiper">
+  <swiper-container #swiperRef init="false" class="custom-swiper">
     @for (item of items(); track item.title) {
-      <swiper-slide>
-        <div class="card-inner text-center">
-          @if (item.image) {
-            <img [src]="item.image" [alt]="item.title" class="tech-icon">
-          } @else if (item.iconClass) {
-            <i [class]="item.iconClass + ' display-4 mb-3'"></i>
+      <swiper-slide [class.slide-bg-mode]="item.isBackground">
+        <div class="card-inner"
+             [class.bg-mode]="item.isBackground"
+             [class.card-inner-centered]="!item.isBackground">
+
+          @if (item.image && item.isBackground) {
+            <img [src]="item.image" class="bg-image-layer">
+            <div class="card-overlay"></div>
           }
-          <h5 class="mt-2 text-dark">{{ item.title }}</h5>
-          @if (item.subtitle) {
-            <p class="small text-muted">{{ item.subtitle }}</p>
-          }
+
+          <div class="content-layer">
+            @if (item.image && !item.isBackground) {
+              <img [src]="item.image" [alt]="item.title" class="tech-icon-centered">
+            } @else if (item.iconClass) {
+              <i [class]="item.iconClass + ' display-4 mb-3'"></i>
+            }
+
+            <h5 class="card-title">{{ item.title }}</h5>
+
+            @if (item.subtitle) {
+              <p class="card-description">{{ item.subtitle }}</p>
+            }
+          </div>
+
         </div>
       </swiper-slide>
     }

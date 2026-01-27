@@ -1,0 +1,76 @@
+/* Contenedor principal oscuro */
+.unified-tech-section {
+  background: radial-gradient(
+    circle at top right,
+    var(--color-dark-light),
+    var(--color-dark)
+  ) !important;
+}
+
+
+.unified-tech-section p.lead {
+  color: var(--color-accent) !important;
+  opacity: 0.9;
+}
+/* Modificación específica para el Swiper de Azure */
+::ng-deep .azure-swiper .swiper-slide {
+  height: 400px !important;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(146, 20, 12, 0.3); /* Borde sutil rojo */
+}
+
+::ng-deep .azure-swiper .card-inner {
+  height: 100%;
+  width: 100%;
+  padding: 0 !important;
+  position: relative;
+  background: var(--color-accent) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left !important;
+}
+
+/* Transformamos la imagen del swiper en un fondo (Background) */
+::ng-deep .azure-swiper .tech-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+::ng-deep .azure-swiper .card-inner h5,
+::ng-deep .azure-swiper .card-inner p {
+  position: relative;
+  z-index: 2;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: var(--color-primary) !important;
+}
+
+::ng-deep .azure-swiper .card-inner h5 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--color-accent) !important;
+  margin-bottom: 5px;
+}
+
+.hero h1 {
+  color: var(--color-primary) !important;
+  font-weight: bold;
+}
+
+.hero p {
+  color: var(--color-accent) !important;
+}
+
+.btn-cv {
+  background: var(--color-primary) !important;
+  color: var(--color-accent) !important;
+  font-weight: 600;
+}

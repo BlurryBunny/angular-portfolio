@@ -49,12 +49,14 @@ export class ProjectPage implements OnInit {
       description: "PWA platform for end-users to monitor usage, acquire services, and check purchase history in real-time.",
       imgUrl: "imgs/onWeb_R8_PWA_Customer.png",
       projectUrl: "https://ciudadanos.vercel.app/#/",
+      tags: ['Quasar', 'Firebase', 'Oddo']
     },
     {
       title: "Agenda Ambiental Portal",
       description: "Web portal for UASLP department linking events, publications, and exclusive academic activities.",
       imgUrl: "imgs/onWeb_PortalAgenda.jpg",
       projectUrl: "https://ambiental.uaslp.mx/",
+      tags: ['Vue', 'PHP', 'SQL']
     },
   ];
 
@@ -71,6 +73,7 @@ export class ProjectPage implements OnInit {
       description: "Conceptual mobile platform to manage pet store inventory and streamline customer-buyer communication.",
       imgUrl: "imgs/projects_DoMas.jpg",
       projectUrl: "https://www.figma.com/file/...",
+      tags: ['Flutter', 'Firebase']
     },
   ];
 

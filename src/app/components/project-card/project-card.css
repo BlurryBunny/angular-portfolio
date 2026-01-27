@@ -1,14 +1,18 @@
 .project-card {
   position: relative;
-  border-radius: 15px;
+  border-radius: var(--border-radius-lg);
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  transition: transform 0.4s ease;
-  height: 250px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 280px;
+  background-color: var(--color-dark-light);
+  border: 1px solid rgba(146, 20, 12, 0.1);
 }
 
 .project-card:hover {
   transform: translateY(-10px);
+  border-color: var(--color-primary);
+  box-shadow: 0 15px 35px rgba(146, 20, 12, 0.3);
 }
 
 .img-container {
@@ -21,6 +25,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.1);
 }
 
 .overlay {
@@ -29,7 +38,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, rgba(0, 123, 255, 0.9), rgba(0, 0, 0, 0.4));
+  background: linear-gradient(
+    to top,
+    var(--color-dark) 0%,
+    rgba(146, 20, 12, 0.7) 100%
+  );
   opacity: 0;
   display: flex;
   align-items: flex-end;
@@ -42,8 +55,8 @@
 }
 
 .overlay-content {
-  color: white;
-  transform: translateY(20px);
+  color: var(--color-accent);
+  transform: translateY(30px);
   transition: transform 0.4s ease;
 }
 
@@ -54,9 +67,23 @@
 .overlay-content h4 {
   font-weight: bold;
   margin-bottom: 8px;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .overlay-content p {
   font-size: 0.85rem;
-  line-height: 1.2;
+  line-height: 1.4;
+  color: var(--color-accent-muted);
+  margin-bottom: 12px;
+}
+
+.tags .badge {
+  background-color: var(--color-primary) !important;
+  color: var(--color-accent);
+  font-weight: 500;
+  font-size: 0.7rem;
+  border: 1px solid rgba(255, 248, 240, 0.2);
+  padding: 5px 10px;
 }

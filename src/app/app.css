@@ -1,0 +1,15 @@
+:root {
+  /* Paleta de Colores Principal */
+  --color-dark: #1e1e24;      /* Negro Azulado */
+  --color-primary: #92140c;   /* Rojo Sangre */
+  --color-accent: #8d99ae;    /* Crema */
+
+  /* Variantes sutiles para efectos */
+  --color-dark-light: #2a2a33;
+  --color-primary-muted: rgba(146, 20, 12, 0.4);
+  --color-accent-muted: rgba(94, 92, 89, 0.8);
+
+  /* Sombras y Bordes */
+  --shadow-standard: 0 10px 20px rgba(0, 0, 0, 0.2);
+  --border-radius-lg: 18px;
+}

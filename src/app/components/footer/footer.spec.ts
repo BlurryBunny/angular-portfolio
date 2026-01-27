@@ -18,7 +18,6 @@ describe('FooterComponent', () => {
   it('debería tener enlaces con target="_blank" para redes sociales', () => {
     const links = fixture.nativeElement.querySelectorAll('.social-icon');
     links.forEach((link: HTMLAnchorElement) => {
-      // El link de mailto no suele llevar target blank, lo saltamos
       if (!link.href.includes('mailto:')) {
         expect(link.target).toBe('_blank');
       }
