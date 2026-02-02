@@ -48,7 +48,7 @@ export class Home implements OnInit, OnDestroy {
   }
 
   downloadCV() {
-    window.open('my-cv.pdf', '_blank');
+    window.open('UUDP_CV_2026.pdf', '_blank');
   }
 
   faDownload = faDownload;
